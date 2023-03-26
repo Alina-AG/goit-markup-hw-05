@@ -23,6 +23,9 @@ body {
     color: var(--text);
     background: var(--white-background);
 }
+button {
+    cursor: pointer;
+}
 h1, h2, h3, p {
     margin-top: 0;
     margin-bottom: 0;
@@ -158,7 +161,6 @@ img {
     transition: color var(--transition-descr);
 }
 .nav-menu .header-link {
-    position: relative;
     display: block;
     font-weight: 500;
     color: var(--dark);
@@ -176,6 +178,9 @@ img {
 .contacts-items {
     display: flex;
     gap: 40px;
+}
+.active {
+    position: relative;
 }
 .active::after {
     content: "";
@@ -242,7 +247,6 @@ img {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border: none;
     border-radius: 4px;
-    cursor: pointer;
 
     transition: background-color var(--transition-descr);
 }
@@ -348,7 +352,7 @@ img {
     border: 1px solid var(--subtle-text);
     border-radius: 4px;
 
-    transition: border 250ms var(--transition-descr);
+    transition: border var(--transition-descr);
 }
 .customers-icon {
     fill: var(--subtle-text);
@@ -500,7 +504,6 @@ footer .soc-list-link:focus {
     border: 1px solid var(--accent);
     border-radius: 4px;
 
-    cursor: pointer;
     transition: background-color   var(--transition-descr),
                 color  var(--transition-descr),
                 border-color   var(--transition-descr),
@@ -538,7 +541,7 @@ footer .soc-list-link:focus {
     background-color: var(--primary-brand);
     color: var(--light);
 
-    transition: transform 500ms linear;
+    transition: transform var(--transition-descr);
 }
     
 .portfolio-list-item>.link:hover,
