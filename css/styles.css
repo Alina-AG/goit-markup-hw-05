@@ -158,6 +158,8 @@ img {
     transition: color var(--transition-descr);
 }
 .nav-menu .header-link {
+    position: relative;
+    display: block;
     font-weight: 500;
     color: var(--dark);
 }
@@ -177,15 +179,19 @@ img {
 }
 .active::after {
     content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+
     display: block;
     width: 100%;
     height: 4px;
-    margin-bottom: -1px;
+    
     
     background-color: var(--pressed-state);
     border-radius: 2px;
 }
-.active>.header-link {
+.nav-menu .active {
     color: var(--pressed-state);
 }
 
